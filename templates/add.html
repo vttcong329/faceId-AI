@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  * {
+    font-family: "Play", sans-serif;
+  }
+
+  #nhd-div-2 h3.tde :after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-left: 15px solid #3498db;
+    border-bottom: 19px solid transparent;
+    border-right: 0 solid transparent;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+  }
+
+  #nhd-div-2 h3.tde span {
+    background: #3498db;
+    padding: 11px 20px 9px 20px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+  }
+
+  #nhd-div-2 h3.tde {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  #nhd-div-2 hr {
+    margin: -34px 0px 54px 0px;
+    border: 1px solid #3498db;
+  }
+</style>
+<div id='nhd-div-2'>
+  <h2 class="tde">
+    <span>Add Person</span>
+  </h2>
+</div>
+<form action="/takePhotos" method="post">
+  <div class="fd">
+    <label for="number" class="label">STT</label>
+    <div class="control">
+      <input type="number" name="number" class="input" required="required" />
+    </div>
+  </div>
+  <div class="fd">
+    <label for="Name" class="label">Name</label>
+    <div class="control">
+      <input type="text" name="Name" class="input" required="required" />
+    </div>
+  </div>
+  <div class="fd">
+    <label for="idName" class="label">MSSV</label>
+    <div class="control">
+      <input type="text" name="idName" class="input" required="required" />
+    </div>
+  </div>
+  <div class="fd isgr">
+    <div class="control">
+      <button class="button ispr issmall" type="submit">Save</button>
+    </div>
+  </div>
+  <style>
+    .button {
+      background-color: yellowgreen;
+      width: 30%;
+    }
+
+    .fd {
+      display: block;
+    }
+
+    input[type=text] {
+      width: 30%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid red;
+      border-radius: 4px;
+    }
+
+    .label {
+      width: 30%;
+      padding: 10px 15px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      background-color: peachpuff;
+    }
+
+    input[type=number] {
+      width: 30%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid red;
+      border-radius: 4px;
+    }
+
+    /* form {
+      background-color: dimgray;
+    } */
+  </style>
+</form>
+<style>
+  body {
+    background-color: grey;
+  }
+</style>
+{% endblock %}

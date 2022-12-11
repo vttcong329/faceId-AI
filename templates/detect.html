@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<title>Recognition</title>
+<style>
+  h2 {
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 3.2em
+  }
+
+  body {
+    background-color: cadetblue;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <center>
+      <h2>Recognition</h2>
+    </center>
+    <div class="col-lg-offset-2 col-lg-8">
+      <img src="{{ url_for('detect_video_capture') }}" width="100%">
+    </div>
+
+    <div class="col-lg-offset-2 col-lg-8">
+      <center class>
+        <form class="form-inline" action="/stopDetect" method="post" enctype="multipart/form-data">
+          <input type="submit" class="btn btn-danger btn-md btn-block" value="undo">
+        </form>
+      </center>
+      <br>
+    </div>
+  </div>
+  <footer>
+    <div class="group">
+      <p1> Trí Tuệ Nhân Tạo - AI <br>
+        <p2> Thành viên Nhóm: <br>
+          <p3><i> Vũ Trần Thành Công - 20110448 </i><br>
+            <p4><i> Trương Minh Hiếu - 20110481 </i><br>
+    </div>
+  </footer>
+  <style>
+    .group {
+      background: #222;
+      border-top: 5px solid #333;
+      color: #ccc;
+      font-weight: bold;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</body>
+
+</html>
